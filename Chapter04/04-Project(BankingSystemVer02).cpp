@@ -1,5 +1,6 @@
 /*
 	BankingSystemVer01을 class와 캡슐화를 통해 업그레이드
+	(https://github.com/afterhoon/cppProgrammingExam/blob/master/Chapter01/01-Project(BankingSystemVer01).cpp)
 */
 
 #include <iostream>
@@ -18,7 +19,7 @@ private:
 	int money;
 public:
 	Account(int myID, char *myName, int myMoney)
-		: accID(myID), money(myMoney){
+		: accID(myID), money(myMoney) {
 		name = new char[strlen(myName) + 1];
 		strcpy_s(name, strlen(myName) + 1, myName);
 	}
@@ -60,7 +61,7 @@ Account * accArr[100];
 int accCount = 0;
 
 int main() {
-	
+
 	int select = 0;
 	int exit = 0;
 
